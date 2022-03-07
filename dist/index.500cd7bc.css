@@ -1,0 +1,156 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@200;300;400;500;600;700&display=swap";
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.calculator {
+  width: 100%;
+  height: auto;
+  background-image: url("crypto-Bg.f89a2d86.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 567px) {
+  .calculator {
+    padding-top: 65px;
+    padding-bottom: 56px;
+  }
+}
+.calculator .crypto-logo {
+  text-align: center;
+}
+.container {
+  max-width: 391px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 220px;
+  margin-top: 100px;
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 60px 100px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  .container {
+    padding: 40px 20px;
+    margin-top: 48px;
+  }
+}
+.container .heading {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #282828;
+}
+@media only screen and (max-width: 567px) {
+  .container .heading {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.container .checkbox-items {
+  margin-left: 35px;
+}
+.container .checkbox-items .group {
+  margin: 25px 0;
+}
+.container .checkbox-items input[type=checkbox] {
+  display: none;
+}
+.container .checkbox-items label {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #282828;
+}
+@media only screen and (max-width: 567px) {
+  .container .checkbox-items label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.container .checkbox-items label::before {
+  content: "";
+  background: url("Check-mark.69744f7a.svg");
+  background-position: center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -34px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.container .checkbox-items input[type=checkbox]:checked + ::before {
+  transform: scale(1);
+}
+.container .checkbox-items label::after {
+  content: "";
+  border: 1px solid #282828;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  left: -34.5px;
+  top: -0.5px;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+}
+.container .checkbox-items input[type=checkbox]:checked + ::after {
+  border: 1px solid #09C51C;
+}
+.container #slider {
+  margin-top: 64px;
+}
+.container #custom-handle {
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin-top: -0.7em;
+  text-align: center;
+  line-height: 1.4em;
+  background: #FFFFFF;
+  border: 2px solid #F12C73;
+  box-shadow: 0px 2px 12px rgba(74, 29, 45, 0.29);
+  border-radius: 50%;
+}
+.container .ui-slider-horizontal {
+  height: 0;
+}
+.container .button {
+  width: 100%;
+  margin-top: 74px;
+}
+.container .deliver-btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #BEBABC;
+  border-radius: 60px;
+  padding: 22px;
+  display: block;
+  text-align: center;
+}
+/*# sourceMappingURL=index.500cd7bc.css.map */
