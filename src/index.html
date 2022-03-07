@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.scss">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var handle = $( "#custom-handle" );
+    $( "#slider" ).slider({
+      create: function() {
+        handle.text( $( this ).slider( "value" ) );
+      },
+      slide: function( event, ui ) {
+        handle.text( ui.value );
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+    
+    <section class="calculator">
+
+        <div class="crypto-logo">
+            <img src="../image/logo.svg" alt="crypto-logo">
+        </div>
+
+        <div class="container">
+
+            <div class="text">
+                <h1 class="heading">Do you?</h1>
+            </div>
+
+            <div class="checkbox-items">
+
+                <div class="group">
+                    <input type="checkbox" id="buy">
+                    <label for="buy">( Buy and sell )kjøp og salg +7000</label>
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" id="Futures">
+                    <label for="Futures">Futures/leverage +4000</label>
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" id="Farming">
+                    <label for="Farming">Farming/Yield Farming/Liquidity Mining +6000</label>
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" id="kjøp">
+                    <label for="kjøp">kjøp av noder eller lignende +8000</label>
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" id="NFT">
+                    <label for="NFT">NFT`er +5000</label>
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" id="airdrop">
+                    <label for="airdrop">Fått airdrop +4000</label>
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" id="Mining">
+                    <label for="Mining">Mining +5000 </label>
+                </div>
+
+            </div> <!-- checkbox-items -->
+                   
+            <div class="text">
+                <h1 class="heading">How many transactions</h1>
+            </div>
+
+            <div id="slider">
+                <div id="custom-handle" class="ui-slider-handle"></div>
+            </div>
+
+            <div class="button">
+                <a class="deliver-btn" href="#">Your price to deliver</a>
+            </div>
+            
+        </div>
+
+    </section>
+
+</body>
+</html>
