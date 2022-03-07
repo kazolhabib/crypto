@@ -14,6 +14,15 @@ body{
     background-size: cover;
     padding-top: 40px;
     padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 567px){
+        padding-top: 65px;
+        padding-bottom: 56px;
+    }
+
     .crypto-logo{
         text-align: center;
         // padding-top: 40px;
@@ -30,17 +39,19 @@ body{
     flex-direction: column;
     justify-content: center;
     padding: 60px 220px;
-    margin-top: 60px;
+    margin-top: 100px;
 
-    @media only screen and (max-width: 867px){
+    @media only screen and (max-width: 767px){
         padding: 60px 100px;
     }
-    @media only screen and (max-width: 637px){
-        padding: 50px 60px;
-    }
-    @media only screen and (max-width: 537px){
+    @media only screen and (max-width: 567px){
         padding: 40px 20px;
+        margin-top: 48px;
     }
+    // @media only screen and (max-width: 492px){
+    //     padding: 40px 18px;
+    //     margin-top: 50px;
+    // }
 
 
     .heading{
@@ -48,6 +59,12 @@ body{
         font-size: 24px;
         line-height: 29px;
         color: #282828;
+
+        @media only screen and (max-width: 567px){
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
 // checkbox-items----------
 
@@ -66,6 +83,13 @@ body{
             font-weight: 500;
             font-size: 16px;
             line-height: 19px;
+            color: #282828;
+
+            @media only screen and (max-width: 567px){
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+            }
         }
         label::before{
             content: "";
