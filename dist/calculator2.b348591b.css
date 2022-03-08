@@ -8,6 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  color: #282828;
 }
 
 .calculator {
@@ -42,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 220px;
+  padding: 60px 209px;
   margin: 100px auto 0;
 }
 
@@ -64,6 +65,9 @@ body {
   font-size: 24px;
   line-height: 29px;
   color: #282828;
+  margin: 0;
+  padding-top: 42px;
+  padding-bottom: 32px;
 }
 
 @media only screen and (max-width: 567px) {
@@ -71,6 +75,8 @@ body {
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
+    padding-top: 32px;
+    padding-bottom: 20px;
   }
 }
 
@@ -138,66 +144,32 @@ body {
   border: 1px solid #09c51c;
 }
 
-.container #mw-range-slider {
-  margin-top: 64px;
-  border-radius: 4px;
+.container .form-group {
+  margin-top: 50px;
 }
 
-.container #mw-range-slider .current-value {
-  position: absolute;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 36px;
-  color: #282828;
-  top: -50px;
-  transform: translateX(-50%);
+@media only screen and (max-width: 567px) {
+  .container .form-group {
+    margin-top: 30px;
+  }
 }
 
-.container #mw-range-slider .custom-range {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-}
-
-.container #mw-range-slider .fake-bar {
-  border: 1px solid #F12C73;
-  border-radius: 4px;
-  width: 101%;
-  margin-top: -1px;
-  width: 0%;
-}
-
-.container #mw-range-slider .start,
-.container #mw-range-slider .end {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  color: #282828;
-}
-
-.container #custom-handle {
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  margin-top: -0.7em;
-  text-align: center;
-  line-height: 1.4em;
-  background: #ffffff;
-  border: 2px solid #f12c73;
-  box-shadow: 0 2px 12px rgba(74, 29, 45, 0.29);
-  border-radius: 50%;
-  outline: none;
-}
-
-.container .ui-slider-horizontal {
-  height: 0;
+.container .form-group input[type=email] {
+  width: 100%;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 0.5;
+  padding: 19px 0 19px 30px;
+  border: 1px solid #28282852;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-top: 10px;
 }
 
 .container .button-wrapper {
   width: 100%;
-  margin-top: 74px;
+  margin-top: 28px;
 }
 
 .container .deliver-btn {
@@ -217,4 +189,51 @@ body {
 .container .deliver-btn-disabled {
   background: #bebabc;
 }
-/*# sourceMappingURL=index.500cd7bc.css.map */
+
+.crypto-card {
+  box-sizing: border-box;
+  background: #FBF7F8;
+  border-radius: 30px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 567px) {
+  .crypto-card {
+    padding: 40px 0;
+  }
+}
+
+.crypto-card .prices-heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 567px) {
+  .crypto-card .prices-heading {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.crypto-card .prices {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #F12C73;
+  margin: 0;
+}
+
+@media only screen and (max-width: 567px) {
+  .crypto-card .prices {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+/*# sourceMappingURL=calculator2.b348591b.css.map */

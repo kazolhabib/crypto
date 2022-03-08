@@ -1,15 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="./style/calculator2.scss">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Accounting - Calculator</title>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./style/calculator2.scss" />
 
-    
-</body>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="calculator">
+      <div class="crypto-logo">
+        <img src="./image/logo.svg" alt="crypto-logo" />
+      </div>
+      <div class="container"> 
+        <div class="crypto-card">
+          <h1 class="prices-heading">Your crypto Prices</h1>
+          <h1 class="prices">5000 kr</h1>
+        </div>
+        <div class="text">
+          <h1 class="heading">Your price for us checking your form</h1>
+        </div>
+
+        <div class="checkbox-items">@media only screen and (max-width: 567px) {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+          padding-top: 32px;
+          padding-bottom: 20px;
+        }
+          <div class="group">
+            <input type="checkbox" name="choices" id="buy" value="7000" />
+            <label for="buy">( Buy and sell )kjøp og salg +7000</label>
+          </div>
+
+          <div class="group">
+            <input type="checkbox" name="choices" id="Futures" value="4000"/>
+            <label for="Futures">Futures/leverage +4000</label>
+          </div>
+
+          <div class="group">
+            <input type="checkbox" name="choices" id="Farming" value="6000"/>
+            <label for="Farming"
+              >Farming/Yield Farming/Liquidity Mining +6000</label
+            >
+          </div>
+
+          <div class="group">
+            <input type="checkbox" name="choices" id="kjøp" value="8000"/>
+            <label for="kjøp">kjøp av noder eller lignende +8000</label>
+          </div>
+
+          <div class="group">
+            <input type="checkbox" name="choices" id="NFT" value="5000"/>
+            <label for="NFT">NFT`er +5000</label>
+          </div>
+
+          <div class="group">
+            <input type="checkbox" name="choices" id="airdrop" value="4000"/>
+            <label for="airdrop">Fått airdrop +4000</label>
+          </div>
+
+          <div class="group">
+            <input type="checkbox" name="choices" id="Mining" value="5000"/>
+            <label for="Mining">Mining +5000 </label>
+          </div>
+        </div>
+        <!-- checkbox-items -->
+
+        <div class=" form-group">
+          <form>
+            <label for="email">Email</label>
+            <input type="email" placeholder="type your email" id="email" name="email">
+          </form>
+        </div>
+
+        <div class="button-wrapper">
+          <a class="deliver-btn deliver-btn-disabled" href="#">Your price to deliver</a>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        /**
+         * Checkbox code
+         */
+        var checkedValues = [];
+        function disableButton() {
+          $(".deliver-btn").addClass("deliver-btn-disabled");
+        }
+        function enableButton() {
+          $(".deliver-btn").removeClass("deliver-btn-disabled");
+        }
+        $("input[name='choices']").change(function () {
+          if ($(this).is(":checked")) {
+            checkedValues.push($(this).val());
+          } else {
+            checkedValues.splice(checkedValues.indexOf($(this).val()), 1);
+          }
+          if (checkedValues.length > 0) {
+            enableButton();
+          } else {
+            disableButton();
+          }
+        });
+        // end checkbox code
+      
+    </script>
+  </body>
 </html>

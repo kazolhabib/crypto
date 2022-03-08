@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Accounting - Calculator</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/index.500cd7bc.css">
+    <link rel="stylesheet" href="/calculator2.b348591b.css">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -19,10 +19,13 @@
       <div class="crypto-logo">
         <img src="/logo.ea13271d.svg" alt="crypto-logo">
       </div>
-
-      <div class="container">
+      <div class="container"> 
+        <div class="crypto-card">
+          <h1 class="prices-heading">Your crypto Prices</h1>
+          <h1 class="prices">5000 kr</h1>
+        </div>
         <div class="text">
-          <h1 class="heading">Do you?</h1>
+          <h1 class="heading">Your price for us checking your form</h1>
         </div>
 
         <div class="checkbox-items">
@@ -62,22 +65,12 @@
           </div>
         </div>
         <!-- checkbox-items -->
-
-        <div class="text">
-          <h1 class="heading">How many transactions</h1>
-        </div>
-
-        <div id="mw-range-slider">
-          <div class="current-value">900</div>
-
-          <div id="custom-handle" class="ui-slider-handle"></div>
-
-          <div class="fake-bar"></div>
-
-          <div class="custom-range">
-            <div class="start">500</div>
-            <div class="end">2000</div>
-          </div>
+               
+        <div class=" form-group">
+          <form>
+            <label for="email">Email</label>
+            <input type="email" placeholder="type your email" id="email" name="email">
+          </form>
         </div>
 
         <div class="button-wrapper">
@@ -88,50 +81,21 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script>$(function() {
-    /**
-         * Slider code
-         * @type {*|jQuery|HTMLElement}
-         */ var handle = $("#custom-handle");
-    var fakeBar = $(".fake-bar");
-    var currentVal = $(".current-value");
-    var multiplyer = 15;
-    var minVal = 500;
-    var startVal = 900;
-    var startValPercent = (startVal - minVal) / multiplyer;
-    // var endVal = 2000;
-    $("#mw-range-slider").slider({
-        value: startValPercent,
-        create: function() {
-            //handle.text($(this).slider("value"));
-            currentVal.text($(this).slider("value") * multiplyer + minVal);
-            currentVal.css("left", startValPercent + "%");
-            fakeBar.css("width", startValPercent + "%");
-        },
-        slide: function(event, ui) {
-            //handle.text(ui.value);
-            currentVal.text(ui.value * multiplyer + minVal);
-            currentVal.css("left", ui.value + "%");
-            fakeBar.css("width", ui.value + "%");
-        }
-    });
-    /**
+    <script>/**
          * Checkbox code
          */ var checkedValues = [];
-    function disableButton() {
-        $(".deliver-btn").addClass("deliver-btn-disabled");
-    }
-    function enableButton() {
-        $(".deliver-btn").removeClass("deliver-btn-disabled");
-    }
-    $("input[name='choices']").change(function() {
-        if ($(this).is(":checked")) checkedValues.push($(this).val());
-        else checkedValues.splice(checkedValues.indexOf($(this).val()), 1);
-        if (checkedValues.length > 0) enableButton();
-        else disableButton();
-    });
-// end checkbox code
-});
+function disableButton() {
+    $(".deliver-btn").addClass("deliver-btn-disabled");
+}
+function enableButton() {
+    $(".deliver-btn").removeClass("deliver-btn-disabled");
+}
+$("input[name='choices']").change(function() {
+    if ($(this).is(":checked")) checkedValues.push($(this).val());
+    else checkedValues.splice(checkedValues.indexOf($(this).val()), 1);
+    if (checkedValues.length > 0) enableButton();
+    else disableButton();
+}); // end checkbox code
 
 </script>
   </body>

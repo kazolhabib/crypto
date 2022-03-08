@@ -1,96 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="./style/style.scss">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    var handle = $( "#custom-handle" );
-    $( "#slider" ).slider({
-      create: function() {
-        handle.text( $( this ).slider( "value" ) );
-      },
-      slide: function( event, ui ) {
-        handle.text( ui.value );
-      }
-    });
-  } );
-  </script>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Accounting - Calculator</title>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./style/style.scss" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <section class="calculator">
+      <div class="crypto-logo">
+        <img src="./image/logo.svg" alt="crypto-logo" />
+      </div>
 
-        <div class="crypto-logo">
-            <img src="./image/logo.svg" alt="crypto-logo">
+      <div class="container">
+        <div class="text">
+          <h1 class="heading">Do you?</h1>
         </div>
 
-        <div class="container">
+        <div class="checkbox-items">
+          <div class="group">
+            <input type="checkbox" name="choices" id="buy" value="7000" />
+            <label for="buy">( Buy and sell )kjøp og salg +7000</label>
+          </div>
 
-            <div class="text">
-                <h1 class="heading">Do you?</h1>
-            </div>
+          <div class="group">
+            <input type="checkbox" name="choices" id="Futures" value="4000"/>
+            <label for="Futures">Futures/leverage +4000</label>
+          </div>
 
-            <div class="checkbox-items">
+          <div class="group">
+            <input type="checkbox" name="choices" id="Farming" value="6000"/>
+            <label for="Farming"
+              >Farming/Yield Farming/Liquidity Mining +6000</label
+            >
+          </div>
 
-                <div class="group">
-                    <input type="checkbox" id="buy">
-                    <label for="buy">( Buy and sell )kjøp og salg +7000</label>
-                </div>
+          <div class="group">
+            <input type="checkbox" name="choices" id="kjøp" value="8000"/>
+            <label for="kjøp">kjøp av noder eller lignende +8000</label>
+          </div>
 
-                <div class="group">
-                    <input type="checkbox" id="Futures">
-                    <label for="Futures">Futures/leverage +4000</label>
-                </div>
+          <div class="group">
+            <input type="checkbox" name="choices" id="NFT" value="5000"/>
+            <label for="NFT">NFT`er +5000</label>
+          </div>
 
-                <div class="group">
-                    <input type="checkbox" id="Farming">
-                    <label for="Farming">Farming/Yield Farming/Liquidity Mining +6000</label>
-                </div>
+          <div class="group">
+            <input type="checkbox" name="choices" id="airdrop" value="4000"/>
+            <label for="airdrop">Fått airdrop +4000</label>
+          </div>
 
-                <div class="group">
-                    <input type="checkbox" id="kjøp">
-                    <label for="kjøp">kjøp av noder eller lignende +8000</label>
-                </div>
+          <div class="group">
+            <input type="checkbox" name="choices" id="Mining" value="5000"/>
+            <label for="Mining">Mining +5000 </label>
+          </div>
+        </div>
+        <!-- checkbox-items -->
 
-                <div class="group">
-                    <input type="checkbox" id="NFT">
-                    <label for="NFT">NFT`er +5000</label>
-                </div>
-
-                <div class="group">
-                    <input type="checkbox" id="airdrop">
-                    <label for="airdrop">Fått airdrop +4000</label>
-                </div>
-
-                <div class="group">
-                    <input type="checkbox" id="Mining">
-                    <label for="Mining">Mining +5000 </label>
-                </div>
-
-            </div> <!-- checkbox-items -->
-                   
-            <div class="text">
-                <h1 class="heading">How many transactions</h1>
-            </div>
-
-            <div id="slider">
-                <div id="custom-handle" class="ui-slider-handle"></div>
-            </div>
-
-            <div class="button">
-                <a class="deliver-btn" href="#">Your price to deliver</a>
-            </div>
-            
+        <div class="text">
+          <h1 class="heading">How many transactions</h1>
         </div>
 
+        <div id="mw-range-slider">
+          <div class="current-value">900</div>
+
+          <div id="custom-handle" class="ui-slider-handle"></div>
+
+          <div class="fake-bar"></div>
+
+          <div class="custom-range">
+            <div class="start">500</div>
+            <div class="end">2000</div>
+          </div>
+        </div>
+
+        <div class="button-wrapper">
+          <a class="deliver-btn deliver-btn-disabled" href="#">Your price to deliver</a>
+        </div>
+      </div>
     </section>
 
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        /**
+         * Slider code
+         * @type {*|jQuery|HTMLElement}
+         */
+        var handle = $("#custom-handle");
+        var fakeBar = $(".fake-bar");
+        var currentVal = $(".current-value");
+        var multiplyer = 15;
+        var minVal = 500;
+        var startVal = 900;
+        var startValPercent = (startVal - minVal) / multiplyer;
+        // var endVal = 2000;
+
+        $("#mw-range-slider").slider({
+          value: startValPercent,
+          create: function () {
+            //handle.text($(this).slider("value"));
+            currentVal.text(($(this).slider("value") * multiplyer) + minVal);
+            currentVal.css("left", startValPercent + "%");
+            fakeBar.css("width", startValPercent + "%");
+          },
+          slide: function (event, ui) {
+            //handle.text(ui.value);
+            currentVal.text((ui.value * multiplyer) + minVal);
+            currentVal.css("left", ui.value + "%");
+            fakeBar.css("width", ui.value + "%");
+          },
+        });
+
+        /**
+         * Checkbox code
+         */
+        var checkedValues = [];
+        function disableButton() {
+          $(".deliver-btn").addClass("deliver-btn-disabled");
+        }
+        function enableButton() {
+          $(".deliver-btn").removeClass("deliver-btn-disabled");
+        }
+        $("input[name='choices']").change(function () {
+          if ($(this).is(":checked")) {
+            checkedValues.push($(this).val());
+          } else {
+            checkedValues.splice(checkedValues.indexOf($(this).val()), 1);
+          }
+          if (checkedValues.length > 0) {
+            enableButton();
+          } else {
+            disableButton();
+          }
+        })
+        // end checkbox code
+      });
+    </script>
+  </body>
 </html>

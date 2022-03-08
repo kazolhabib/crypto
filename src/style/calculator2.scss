@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: #282828;
+  }
+  
+  .calculator {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-image: url(../image/crypto-Bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 20px 100px;
+    box-sizing: border-box;
+  
+    @media only screen and (max-width: 567px) {
+      padding-top: 65px;
+      padding-bottom: 56px;
+    }
+  
+    .crypto-logo {
+      text-align: center;
+    }
+  }
+  .container {
+    max-width: 840px;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 64px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 209px;
+    margin: 100px auto 0;
+  
+    @media only screen and (max-width: 767px) {
+      padding: 60px 100px;
+    }
+    @media only screen and (max-width: 567px) {
+      padding: 40px 20px;
+      margin-top: 48px;
+    }
+    
+    
+
+    .heading {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #282828;
+      margin: 0;
+      padding-top: 42px;
+      padding-bottom: 32px;
+  
+      @media only screen and (max-width: 567px) {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        padding-top: 32px;
+        padding-bottom: 20px;
+      }
+    }
+    // checkbox-items----------
+  
+    .checkbox-items {
+      margin-left: 35px;
+  
+      .group {
+        margin: 25px 0;
+      }
+  
+      input[type="checkbox"] {
+        display: none;
+      }
+      label {
+        position: relative;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #282828;
+  
+        @media only screen and (max-width: 567px) {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+      label::before {
+        content: "";
+        background: url(../image/Check-mark.svg) center;
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -34px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+  
+        transform: scale(0);
+        transition: all 0.3s ease-in-out;
+      }
+      input[type="checkbox"]:checked + ::before {
+        transform: scale(1);
+      }
+      label::after {
+        content: "";
+        border: 1px solid #282828;
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        left: -34.5px;
+        top: -0.5px;
+        bottom: 0;
+        right: 0;
+        border-radius: 50%;
+      }
+      input[type="checkbox"]:checked + ::after {
+        border: 1px solid #09c51c;
+      }
+    }
+  
+    // checkbox-items----------
+    // .form-group------------
+      .form-group{
+        margin-top: 50px;
+
+        @media only screen and (max-width: 567px) {
+          margin-top: 30px;
+        }
+
+        input[type="email"] {
+          width: 100%;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 14px;
+          opacity: 0.5;
+          padding: 19px 0 19px 30px;
+          border: 1px solid #28282852;
+          box-sizing: border-box;
+          border-radius: 6px;
+          margin-top: 10px;
+        }
+      }
+    
+
+
+    // button--------------
+    .button-wrapper {
+      width: 100%;
+      margin-top: 28px;
+    }
+    .deliver-btn {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 16px;
+      text-decoration: none;
+      color: #ffffff;
+      background: #F12C73;
+      border-radius: 60px;
+      padding: 22px;
+      display: block;
+      text-align: center;
+      transition: all .3s ease-in-out;
+  
+      &-disabled {
+        background: #bebabc;
+      }
+    }
+    // button--------------
+  }
+  // .crypto-card--------------
+  .crypto-card{
+    box-sizing: border-box;
+    background: #FBF7F8;
+    border-radius: 30px;
+    padding: 50px 0;
+    text-align: center;
+
+    @media only screen and (max-width: 567px) {
+      padding: 40px 0;
+    }
+
+    .prices-heading{
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      margin: 0;
+      padding-bottom: 30px;
+
+      @media only screen and (max-width: 567px) {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 20px;
+        padding-bottom: 20px;
+      }
+    }
+    .prices{
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 58px;
+      color: #F12C73;
+      margin: 0;
+
+      @media only screen and (max-width: 567px) {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+  }
